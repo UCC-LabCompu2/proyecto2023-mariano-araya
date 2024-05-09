@@ -29,18 +29,20 @@ nav a {
 
 .div1 {
     background-image: url("imagenes/Pattern.png");
+    background-attachment: fixed;
     background-size: contain;
     background-repeat: repeat-x;
-    background-attachment: fixed;
     height: 77px;
+
 }
 
-.text {
+.container {
+    text-align: left;
     background: #124f9a;
     color: #f8f8f8;
     border: 2px solid black;
     padding: 20px;
-    margin: 70px 50px;
+    margin: 30px 10% 100px 10%;
 }
 
 body {
@@ -58,7 +60,7 @@ body {
     }
 
     a:hover {
-        color: #403e3e;
+        color: rgb(64, 62, 62);
     }
 
     a:active {
