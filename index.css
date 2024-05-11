@@ -35,12 +35,52 @@ nav a {
     height: 77px;
 }
 
-.text {
+.container {
+    text-align: left;
+    background: #124f9a;
+    color: #f8f8f8;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 50px 50px 120px 50px;
+
+    .image-canva {
+        float: right;
+        right: 0;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.textindex {
     background: #124f9a;
     color: #f8f8f8;
     border: 2px solid black;
     padding: 20px;
     margin: 70px 50px;
+}
+
+.textrules {
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 100px;
+}
+
+.containercontact {
+    text-align: left;
+    background: #124f9a;
+    color: #f8f8f8;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 30px 10% 100px 10%;
+}
+
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 100;
+    text-align: center;
+    color: black;
 }
 
 body {
