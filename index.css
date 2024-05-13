@@ -48,7 +48,8 @@ nav a {
         right: 0;
         width: 200px;
         height: 200px;
-    }
+        grid-column: 1; 
+        grid-row: 1;    }
 }
 
 .textindex {
