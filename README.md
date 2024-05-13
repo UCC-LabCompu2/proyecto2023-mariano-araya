@@ -1,8 +1,12 @@
 # PROJECT GOALGUARDIAN 
-# "Choose the most appropiate hockey stick for you"
+## Indice
+- ["Choose the most appropiate hockey stick for you"](#choose-the-most-appropiate-hockey-stick-for-you)
+  - [Autor](#autor)
+    - [Contenido/Descripción](#Contenido/Descripción)
+## "Choose the most appropiate hockey stick for you"
 
 ## Autor
-Araya Mariano Joaquin 
+**Araya** *Mariano Joaquin* 
 . Student of Bioinformatic :microscope:
 
 ### Contenido/Descripción
@@ -15,4 +19,4 @@ Araya Mariano Joaquin
 | 2316635@ucc.edu.ar | Mariano Joaquin Araya |
 
 
-Link of the project: https://ucc-labcompu2.github.io/proyecto2023-mariano-araya/Index.html
+Link of the project: [GoalGuardian:(https://ucc-labcompu2.github.io/proyecto2023-mariano-araya/index.html)]
