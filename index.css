@@ -48,7 +48,8 @@ nav a {
         right: 0;
         width: 200px;
         height: 200px;
-    }
+        grid-column: 1;
+        grid-row: 1;    }
 }
 
 .textindex {
@@ -80,7 +81,7 @@ h2 {
     font-family: "Playfair Display", serif;
     font-weight: 100;
     text-align: center;
-    color: black;
+    color: #ffffff;
 }
 
 body {
@@ -110,6 +111,13 @@ body {
     width: 80px;
     height: 80px;
     float: left;
+}
+#total {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #000000;
+    margin-top: 10px;
+    margin-right: 80%;
 }
 
 footer {
