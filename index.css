@@ -48,11 +48,8 @@ nav a {
         right: 0;
         width: 200px;
         height: 200px;
-<<<<<<< HEAD
         grid-column: 1;
-=======
-        grid-column: 1; 
->>>>>>> c79f626f509d23ccc2ee5c002bc22c0d0523d74d
+        grid-column: 1;
         grid-row: 1;    }
 }
 
