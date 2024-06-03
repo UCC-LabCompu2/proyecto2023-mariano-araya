@@ -3,7 +3,7 @@
 
  */
 
-function calcularTotal() {
+let calcularTotal = () => {
     const cantidad = document.getElementById('cantidad').value;
     let precio = 5000;
     const total = cantidad * precio;
