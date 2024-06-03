@@ -59,9 +59,7 @@
     </div>
     <div>
         <label for="cantidad">Amount of carbon:</label>
-        <input type="number" id="cantidad" min="10" max="100" step="10" value="10">
-
-        <button onclick="calcularTotal()">Calculate price</button>
+        <input type="number" id="cantidad" min="10" max="100" step="10" value="10" onchange="calcularTotal()">
         <p id="total">Price: $0</p>
     </div>
     <div class="form">
