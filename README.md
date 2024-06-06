@@ -19,4 +19,4 @@
 | 2316635@ucc.edu.ar | Mariano Joaquin Araya |
 
 
-Link of the project: [GoalGuardian:(https://ucc-labcompu2.github.io/proyecto2023-mariano-araya/index.html)]
+Link of the project: [GoalGuardian]:(https://ucc-labcompu2.github.io/proyecto2023-mariano-araya/index.html)
