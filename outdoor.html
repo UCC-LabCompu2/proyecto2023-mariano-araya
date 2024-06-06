@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Goalguardian</title>
     <meta content="Araya Mariano" name="author">
-    <meta content="proejct 2024" name="description">
+    <meta content="project 2024" name="description">
     <meta content="html,tags, paragraphs, styles" name="keywords">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,11 +32,12 @@
     <!--<img src="imagenes/Pattern.png" alt="Pattern" class="image-pattern">-->
 </div>
 <div class="container">
-    <img src="imagenes/Paloshockey1.png" id="canva" alt="canva" class="image-canva">
+    <!-- <img src="imagenes/Paloshockey1.png" id="canva" alt="canva" class="image-canva">-->
+    <canvas id="miCanvas" class="canva"></canvas>
     <div>
         <h2>Choose the option that best suits you:</h2>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" size="20" maxlength="20" placeholder="Enter your name">
+        <input type="text" id="name" name="nameInput" size="20" maxlength="20" placeholder="Enter your name">
     </div>
     <div>
         <label for="gender">Gender:</label>
@@ -58,15 +59,12 @@
         </select>
     </div>
     <div>
-        <label for="cantidad">Amount of carbon:</label>
-        <input type="number" id="cantidad" min="10" max="100" step="10" value="10" onchange="calcularTotal()">
+        <label for="amount">Amount of carbon:</label>
+        <input type="number" id="amount" min="10" max="100" step="10" value="10" onchange="calculateTotal()">
         <p id="total">Price: $0</p>
     </div>
     <div class="form">
-        <button type="submit">Submit</button>
-    </div>
-    <div>
-        <canvas id="miCanvas" width="20" height="30"></canvas>
+        <button type="button" onclick="validateName()" onload="drawHockeyStick(position)">Submit</button>
     </div>
 </div>
 <footer>

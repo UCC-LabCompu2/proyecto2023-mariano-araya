@@ -43,15 +43,14 @@ nav a {
     padding: 20px;
     margin: 50px 50px 120px 50px;
 
-    .image-canva {
+    .canva {
+        background-color: #f8f8f8;
+        width: 300px;
+        height: 330px;
         float: right;
-        right: 0;
-        width: 200px;
-        height: 200px;
-        grid-column: 1;
-        grid-column: 1;
-        grid-row: 1;    }
+    }
 }
+
 
 .textindex {
     background: #124f9a;
@@ -113,6 +112,7 @@ body {
     height: 80px;
     float: left;
 }
+
 #total {
     border: 1px solid #ccc;
     padding: 10px;
