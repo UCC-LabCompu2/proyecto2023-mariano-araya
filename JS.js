@@ -51,7 +51,7 @@ let drawHockeyStick = (position) => {
                 image.src = "imagenes/PaloGrays.png";
                 break;
             case "midfielder":
-                image.src = "imagenes/PaloBrabo.png";
+                image.src = "imagenes/Paloshockey1.png";
                 break;
             case "forward":
                 image.src = "imagenes/PaloOsaka.png";
