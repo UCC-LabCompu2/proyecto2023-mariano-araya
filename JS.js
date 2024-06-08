@@ -7,37 +7,54 @@ let calculateTotal = () => {
     const amount = document.getElementById('amount').value;
     let price = 5000;
     const total = amount * price;
-    document.getElementById('total').textContent = `Price: $${total.toFixed(2)}`;
+    document.getElementById('total').textContent = `Price in dollars: $${total.toFixed(2)}`;
 }
 /**
- * Validate the username to verify that it does not contain special characters or that the input is blank
- *@mwthod validateName
+ * Validate the username to verify that it does not contain special characters, numbers or that the input is blank
+ *@mwthod validate
  *@param {string} name //Stores name entered by the user in the input
+ *@param {int} number //Stores height entered by the user
  *@return {boolean} true | false
  */
-let validateName = () => {
+let validate = () => {
     const special = /[^\w\s\-_]/;
+    const number = /[0-9]/;
     const nameInput = document.getElementById('name');
     const name = nameInput.value;
+    const valueInput = document.getElementById('height');
+    const value = valueInput.value;
     if (name === '') {
-        alert("Please enter your name.");
-        return false;
+        alert("Please enter your name");
     }
     if (special.test(name)) {
         alert(" Your name cannot contain special characters. Please enter only letters");
         nameInput.value = ' ';
-        return false;
     }
-    const position = document.getElementById("position").value;
-    drawHockeyStick(position);
+    if (number.test(name)) {
+        alert(" Your name cannot contain numbers. Please enter only letters");
+        nameInput.value = ' ';
+    }
+    if (value < 0) {
+        valueInput.value = ""
+        alert("Height cannot be negative");
+    }
+    if (value === '') {
+        alert("Please enter your height in cm");
+    }
+    if (value > 210) {
+        alert("Please enter a correct height in cm");
+    }
+    drawHockeyStick();
 }
 /**
- * Draws a hockey stick on the canvas based on the specified position
+ * Draws a hockey stick on the canvas based on the specified position and gender
  * @method drawHockeyStick
- * @param {string} position The position of the hockey player ("defender", "midfielder", or "forward")
+ * @param {string} pos The position of the hockey player ("defender", "midfielder", or "forward")
  * @returns {void}
  */
-let drawHockeyStick = (position) => {
+let drawHockeyStick = () => {
+    const hei = document.getElementById("height").value;
+    const gen = document.getElementById("gender").value;
     const pos = document.getElementById("position").value;
     const canvas = document.getElementById("miCanvas");
     const ctx = canvas.getContext("2d");
@@ -46,19 +63,55 @@ let drawHockeyStick = (position) => {
 
     const image = new Image()
     {
-        switch (position) {
-            case "defender":
-                image.src = "imagenes/PaloGrays.png";
-                break;
-            case "midfielder":
-                image.src = "imagenes/Paloshockey1.png";
-                break;
-            case "forward":
-                image.src = "imagenes/PaloOsaka.png";
-                break;
-        }
-        image.onload = function () {
-            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+        if (gen == "male") {
+            switch (pos) {
+                case "defender":
+                    image.src = "imagenes/PaloGrays.png";
+                    break;
+                case "midfielder":
+                    image.src = "imagenes/Paloshockey1.png";
+                    break;
+                case "forward":
+                    image.src = "imagenes/PaloOsaka1.png";
+                    break;
+            }
+            image.onload = function () {
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+            }
+        } else {
+            switch (pos) {
+                case "defender":
+                    image.src = "imagenes/PaloAdidas.png";
+                    break;
+                case "midfielder":
+                    image.src = "imagenes/PaloRitual.png";
+                    break;
+                case "forward":
+                    image.src = "imagenes/PaloBraboD.png";
+                    break;
+            }
+            image.onload = function () {
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+            }
         }
     }
+
+    if (hei >= 160 && hei <= 170) {
+        ctx.font = "10pt Playfair Display";
+        ctx.fillStyle = "black";
+        ctx.fillText("Height of the stick: 35 inches", 90, 20);
+    } else if (hei > 170 && hei <= 180) {
+        ctx.font = "10pt Playfair Display";
+        ctx.fillStyle = "black";
+        ctx.fillText("Height of the stick: 36 inches", 90, 20);
+    } else if (hei > 180 && hei <= 190) {
+        ctx.font = "10pt Playfair Display";
+        ctx.fillStyle = "black";
+        ctx.fillText("Height of the stick: 37 inches", 90, 20);
+    } else if (hei > 190 && hei >= 210) {
+        ctx.font = "10pt Playfair Display";
+        ctx.fillStyle = "black";
+        ctx.fillText("Height of the stick: 38 inches", 90, 20);
+    }
 }
+
