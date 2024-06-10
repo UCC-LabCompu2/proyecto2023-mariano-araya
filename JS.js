@@ -50,7 +50,8 @@ let validate = () => {
  * Draws a hockey stick on the canvas based on the specified position and gender
  * @method drawHockeyStick
  * @param {string} pos The position of the hockey player ("defender", "midfielder", or "forward")
- * @returns {void}
+ * @param {string} gen The gender of the hockey player ("Male" or "Female")
+ * @param {string} hei The height of the hockey player
  */
 let drawHockeyStick = () => {
     const hei = document.getElementById("height").value;
