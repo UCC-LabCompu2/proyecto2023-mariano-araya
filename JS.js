@@ -1,6 +1,6 @@
 /**
  * Calculates the price of the stick depending on the amount of carbon entered by the user
- *@mwthod calculateTotal
+ *@method calculateTotal
  *@param {number} amount //Stores the quantity selected by the user in the input
  */
 let calculateTotal = () => {
@@ -11,7 +11,7 @@ let calculateTotal = () => {
 }
 /**
  * Validate the username to verify that it does not contain special characters, numbers or that the input is blank
- *@mwthod validate
+ *@method validate
  *@param {string} name //Stores name entered by the user in the input
  *@param {int} number //Stores height entered by the user
  *@return {boolean} true | false
@@ -19,6 +19,7 @@ let calculateTotal = () => {
 let validate = () => {
     const special = /[^\w\s\-_]/;
     const number = /[0-9]/;
+    const hei = document.getElementById('height').value;
     const nameInput = document.getElementById('name');
     const name = nameInput.value;
     const valueInput = document.getElementById('height');
@@ -39,10 +40,20 @@ let validate = () => {
         alert("Height cannot be negative");
     }
     if (value === '') {
+        valueInput.value = ""
         alert("Please enter your height in cm");
     }
     if (value > 210) {
+        valueInput.value = ""
         alert("Please enter a correct height in cm");
+    }
+    if (hei < 160) {
+        valueInput.value = ""
+        alert("Please enter a correct height");
+    }
+    if (hei > 210) {
+        valueInput.value = ""
+        alert("Please enter a correct height");
     }
     drawHockeyStick();
 }
@@ -96,22 +107,15 @@ let drawHockeyStick = () => {
             }
         }
     }
-
+    ctx.font = "10pt Playfair Display";
+    ctx.fillStyle = "black";
     if (hei >= 160 && hei <= 170) {
-        ctx.font = "10pt Playfair Display";
-        ctx.fillStyle = "black";
         ctx.fillText("Height of the stick: 35 inches", 90, 20);
     } else if (hei > 170 && hei <= 180) {
-        ctx.font = "10pt Playfair Display";
-        ctx.fillStyle = "black";
         ctx.fillText("Height of the stick: 36 inches", 90, 20);
     } else if (hei > 180 && hei <= 190) {
-        ctx.font = "10pt Playfair Display";
-        ctx.fillStyle = "black";
         ctx.fillText("Height of the stick: 37 inches", 90, 20);
     } else if (hei > 190 && hei >= 210) {
-        ctx.font = "10pt Playfair Display";
-        ctx.fillStyle = "black";
         ctx.fillText("Height of the stick: 38 inches", 90, 20);
     }
 }

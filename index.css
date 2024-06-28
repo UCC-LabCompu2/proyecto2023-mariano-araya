@@ -46,8 +46,6 @@ nav a {
     .canva {
         background-color: #a3b9d2;
         border: 2px solid black;
-        width: 300px;
-        height: 330px;
         float: right;
     }
 }
