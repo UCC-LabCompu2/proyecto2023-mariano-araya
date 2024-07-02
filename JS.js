@@ -121,8 +121,11 @@ let drawHockeyStick = () => {
 
 x = 0;
 dx = 1; // Cantidad de pixeles que se mueve el elemento
-
-function animateCanva() {
+/**
+ * Animates a hockey stick on the canvas based on the specified position and gender
+ * @method animateCanva
+ */
+let animateCanva = () => {
     const canvas = document.getElementById("miCanvas");
     const ctx = canvas.getContext("2d");
     const img = new Image();
@@ -136,12 +139,19 @@ function animateCanva() {
         x = 0;
     }
 }
-
+/**
+ * Starts the animation of a hockey stick on the canvas based on the specified position and gender
+ * @method animateCanva
+ */
 var intervalId;
-function startAnimation(){
+let startAnimation = () => {
     intervalId = setInterval(animateCanva,15);
     setTimeout(stopAnimation, 6000);
 }
-function stopAnimation(){
+/**
+ * Stops the animation of a hockey stick on the canvas based on the specified position and gender
+ * @method animateCanva
+ */
+let stopAnimation = () => {
     clearInterval(intervalId);
 }
