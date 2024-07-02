@@ -70,10 +70,8 @@ let drawHockeyStick = () => {
     const pos = document.getElementById("position").value;
     const canvas = document.getElementById("miCanvas");
     const ctx = canvas.getContext("2d");
-
+    const image = new Image();
     canvas.width = canvas.width;
-
-    const image = new Image()
     {
         if (gen == "male") {
             switch (pos) {
@@ -94,6 +92,7 @@ let drawHockeyStick = () => {
             switch (pos) {
                 case "defender":
                     image.src = "imagenes/PaloAdidas.png";
+                    startAnimation();
                     break;
                 case "midfielder":
                     image.src = "imagenes/PaloRitual.png";
@@ -120,3 +119,29 @@ let drawHockeyStick = () => {
     }
 }
 
+x = 0;
+dx = 1; // Cantidad de pixeles que se mueve el elemento
+
+function animateCanva() {
+    const canvas = document.getElementById("miCanvas");
+    const ctx = canvas.getContext("2d");
+    const img = new Image();
+    img.src = "imagenes/PaloAdidas.png";
+    img.onload = function () {
+        canvas.width = canvas.width;
+        ctx.drawImage(img, x, 0, 300, 330);
+    }
+    x += dx;
+    if (x > canvas.width) {
+        x = 0;
+    }
+}
+
+var intervalId;
+function startAnimation(){
+    intervalId = setInterval(animateCanva,15);
+    setTimeout(stopAnimation, 6000);
+}
+function stopAnimation(){
+    clearInterval(intervalId);
+}
